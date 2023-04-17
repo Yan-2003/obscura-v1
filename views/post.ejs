@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/main.css">
+    <link rel="stylesheet" href="style/dashboard.css">
+    <link rel="icon" href="img/diaphragm.png">
+    <title>Obscura: POST</title>
+<body>
+    <%- include('header')%>
+    <main>
+        <div class="contents--UI">
+            <div class="logo">
+                <h1>Obscura</h1>
+                <img  width = "20" src="img/diaphragm.png" alt="">
+            </div>
+                <form class="main--posting--box" action="" method="post" enctype="multipart/form-data">
+                    <%= locals.error %>
+                    <input class="input--style" type="text" name="title" placeholder="Enter your title.." value="<%= locals.title %>">
+                    <label for="file--post" class="file--post">
+                        <input id="file--post" class="file-style" type="file" name="photo" accept="image/*">
+                    </label>
+                    <div class="box--img">
+                        <p>your photo will be rendered here.</p>
+                    </div>
+                    <button class="button--style" type="sumbit" name="post">Post</button>
+                </form>
+        </div>
+    </main>    
+</body>
+</html>

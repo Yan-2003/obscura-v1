@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style/main.css">
+    <link rel="stylesheet" href="/style/dashboard.css">
+    <link rel="icon" href="/img/diaphragm.png">
+    <title>Obscura</title>
+<body>
+    <%- include('header')%>
+    <main>
+        <div class="contents--UI">
+            <div class="logo">
+                <h1>Obscura</h1>
+                <img  width = "20" src="/img/diaphragm.png" alt="">
+            </div>
+            <p>Galleries</p>
+            <div class="user--gal--content">
+                <% user_data.forEach( (user)=>{ %>
+                    <% if(user.username != username ){ %>
+                        <a class="user--gally" href="/galleries/<%= user.username %>">
+                            <img  width = "100" src="/img/gallery.png" alt="">
+                            <div>
+                                <div class="post--header">
+                                    <h1><%= user.user_full_name%></h1>
+                                    <img  width = "20" src="/img/diaphragm.png" alt="">
+                                </div>
+                                <p> <%= user.username%></p>
+                            </div>
+                        </a>
+                   <% }%>
+                <%})%>
+            </div>
+        </div>
+    </main>    
+</body>
+</html>

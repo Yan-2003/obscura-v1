@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style/main.css">
+    <link rel="stylesheet" href="/style/sign-in-up.css">
+    <link rel="icon" href="/img/diaphragm.png">
+    <title>Obscura: Login</title>
+</head>
+<body>
+    <div class="main--content">
+        <div class="logo">
+            <h1>Obscura</h1>
+            <img  width = "50" src="/img/diaphragm.png" alt="">
+        </div>
+        <form action="" method="post" autocomplete="off">
+            <% if(messages.error){%>
+                <p><%= messages.error%></p>
+            <%} %>
+            <p><%= locals.message%></p>
+            <input class = "input--style" type="text" placeholder="Username" name="username" value="<%= locals.username %>">
+            <input id="pass" class = "input--style" type="password" placeholder="Password" name="password" value="<%= locals.password %>">
+            <div class="checkbox">
+                <input type="checkbox" name="showPass" onclick="showpass('pass')">
+                <p>Show password</p>
+            </div>
+            <button class="btn--style" type="submit" name="login">Login</button>
+            <a href="/" class="btn--style">Back</a>
+            <a href="/register" class="text-d">Don't have an Obscura account? Click Here.</a>
+        </form>
+    </div>
+    <script src="/scripts/showpass.js"></script>
+</body>
+</html>

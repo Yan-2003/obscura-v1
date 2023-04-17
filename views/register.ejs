@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style/main.css">
+    <link rel="stylesheet" href="/style/sign-in-up.css">
+    <link rel="icon" href="/img/diaphragm.png">
+    <title>Obscura: Register</title>
+</head>
+<body>
+    <div class="main--content">
+        <div class="logo">
+            <h1>Obscura</h1>
+            <img  width = "50" src="img/diaphragm.png" alt="">
+        </div>
+        <form action="" method="post" autocomplete="off">
+            <p><%= locals.error %></p>
+            <input class = "input--style" type="text" placeholder="Username" name="username" value="<%= locals.username%>">
+            <input class = "input--style" type="text" placeholder="Full Name" name="name" value="<%= locals.name%>">
+            <input class = "input--style" type="email" placeholder="Email" name="email" value="<%= locals.email%>">
+            <input id="pass1" class = "input--style" type="password" placeholder="Password" name="pass" value="<%= locals.pass%>">
+            <div class="checkbox">
+                <input type="checkbox" name="showPass" onclick="showpass('pass1')">
+                <p>Show password</p>
+            </div>
+            <input id="pass2" class = "input--style" type="password" placeholder="Confirm Password" name="cpass" value="<%= locals.cpass%>">
+            <div class="checkbox">
+                <input type="checkbox" name="showPass" onclick="showpass('pass2')">
+                <p>Show password</p>
+            </div>
+            <button class="btn--style" type="submit" name="register">Register</button>
+            <a href="/" class="btn--style">Back</a>
+            <a href="/login" class="text-d">Already have an Obscura account? Click Here.</a>
+        </form>
+    </div>
+    <script src="/scripts/showpass.js"></script>
+</body>
+</html>

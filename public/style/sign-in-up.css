@@ -1,0 +1,49 @@
+
+.logo{
+    font-size: 20px;
+}
+
+
+form{
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+    gap: 10px;
+}
+
+.input--style{
+    border: none;
+    outline: none;
+    padding: 20px 0;
+}
+
+.btn--style{
+    border: none;
+    outline: none;
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+    font-weight: 700;
+    padding: 10px;
+    background-color: rgb(215, 215, 215);
+    border-radius: 10px;
+    text-align: center;
+}
+
+.btn--style:hover{
+    background-color: rgb(189, 189, 189);
+    transition: 280ms ease-in-out; 
+}
+
+.text-d{
+    font-size: 12px;
+    font-weight: 400;
+    color: black;
+}
+
+.checkbox{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+}

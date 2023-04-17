@@ -1,0 +1,278 @@
+.logo{
+    font-size: 15px;
+    gap:5px;
+}
+
+header{
+    top: 0;
+    left: 0;
+    position: sticky;
+    z-index: 10000000000000;
+}
+
+.main--nav{
+    width: 20%;
+    top: 0;
+    left: 0;
+    position: absolute;
+    height: 100vh;
+    border-right: 1px rgb(100, 100, 100) solid;
+}
+
+
+.navigation{
+    padding-top: 1rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.nav--btns{
+    margin-top: 5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.search--bar--main{
+    border: 1px rgb(100, 100, 100) solid;
+    padding: 5px 20px;
+    border-radius: 50px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.search--btn{
+    outline: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+
+.search--bar{
+    outline: none;
+    border: none;
+    margin: 10px;
+    
+}
+
+.nav--btn{
+    text-decoration: none;
+    color: black;
+    padding: 0;
+    cursor: pointer;
+    margin: 30px;
+}
+
+
+.contents--UI{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.main--posting--box{
+    margin: 5% 0;
+    display: flex;
+    flex-direction: column;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.444);
+}
+
+.input--style{
+    border: none;
+    outline: none; 
+    padding: 10px;
+    font-size: 18px;
+    border-bottom: 1px rgb(186, 186, 186) solid;
+    margin: 20px 0;
+}
+
+.button--style{
+    margin: 30px 0 0 0;
+    border: none;
+    outline: none;
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+    font-weight: 700;
+    padding: 10px;
+    background-color: rgb(215, 215, 215);
+    border-radius: 10px;
+    text-align: center;
+}
+
+.button--style:hover{
+    background-color: rgb(189, 189, 189);
+    transition: 280ms ease-in-out; 
+}
+
+
+.file-style{
+    display: none;
+    border: none;
+    outline: none;
+}
+
+.file--post{
+    width: 64px;
+    height: 64px;
+    background: url("../img/camera.png");
+    background-size: cover;
+    cursor: pointer;
+}
+
+.box--img{
+    padding: 200px 300px;
+    border: 1px rgb(175, 175, 175) solid;
+}
+
+
+.post--user--contents{
+    margin: 5% auto;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.user--post{
+    width: 700px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    border: 1px rgb(168, 168, 168) solid;
+    border-radius: 5px;
+    margin: 1rem auto;
+    object-fit: fill;
+}
+
+.user--post--detail{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+.user--post--detail h1{
+    font-size: 20px;
+}
+
+.title--part{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 1rem 0;
+    border-bottom:  1px rgb(168, 168, 168) solid;
+}
+
+.title--part p{
+    margin: 10px;
+}
+
+.image--part{
+    object-fit: cover;
+}
+
+.img--post{
+    width: 100%;
+    object-fit: contain;
+}
+
+
+.user--detial{
+    width: 50%;
+    padding: 40px;
+    line-height: 2.5rem;
+    margin-top: 5%;
+}
+
+
+.user--gal--content{
+    display: flex;
+    flex-direction: column;
+    margin-top: 5%;
+}
+
+.user--gally{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px   ;
+    text-decoration: none;
+    color: black;
+    padding: 40px;
+    margin: 10px 0;
+    background-color: rgb(245, 245, 245);
+    border-radius: 20px;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.445);
+}
+
+.btn--controls{
+    width: 97%;
+    display: flex;
+    justify-content: end;
+}
+
+.react--section{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap:10px;
+    padding: 10px;
+}
+
+.react--btn{
+    border: none;
+    background: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.follow--btn{
+    border: none;
+    outline: none;
+    background: none;
+    cursor: pointer;
+    padding: 10px 20px;
+    background-color: rgb(203, 224, 255);
+    border-radius: 10px;
+    font-weight: 700;
+    margin: 5px 0;
+}
+
+.follow--btn:hover{
+    background-color: rgb(170, 188, 214);
+    transition: 280ms ease-in;
+}
+
+
+.following--btn{
+    border: none;
+    outline: none;
+    background: none;
+    cursor: pointer;
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-weight: 700;
+    margin: 5px 0;
+    background-color: rgb(215, 215, 215);
+}
+
+.following--btn:hover{
+    background-color: rgb(189, 189, 189);
+    transition: 280ms ease-in-out; 
+}
+
+
+.stats{
+    display: flex;
+    flex-direction: row;
+    gap: 10%;
+}

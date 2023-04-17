@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/main.css">
+    <link rel="stylesheet" href="style/dashboard.css">
+    <link rel="icon" href="img/diaphragm.png">
+    <title>Obscura</title>
+<body>
+    <%- include('header')%>
+    <main>
+        <div class="contents--UI">
+            <div class="logo">
+                <h1>Obscura</h1>
+                <img  width = "20" src="/img/diaphragm.png" alt="">
+            </div>
+            <div class="user--detial">
+                <div class="logo">
+                    <h1><%= user_data[0].user_full_name %></h1>
+                    <img  width = "20" src="img/diaphragm.png" alt="">
+                </div>
+                <p><%= user_data[0].user_email %></p>
+                <p><%= user_data[0].username %></p>
+                <div class="stats">
+                    <h5>Followers : <%= followers %></h5>
+                    <h5>Following : <%= following %></h5>
+                    <h5>Post : <%= post_count %></h5>
+                </div>
+            </div>
+            <div class="post--user--contents">
+                <% user_post.forEach((post)=> { %>
+                    <div class="user--post">
+                        <div class="title--part">
+                            <div class="btn--controls">
+                                <a href="/mygalleries/trash/<%=post.post_id%>"><img width="20" src="/img/delete.png" alt=""></a>
+                            </div>
+                            <div class="user--post--detail">
+                                <h1> <%=  post.post_username %></h1>
+                                <p><%= post.post_date %></p>
+                            </div>
+                            <p><%= post.post_title%></p>
+                        </div>
+                        <div class="image--part">   
+                            <img class = "img--post"  src="<%= post.post_img_file_path %>" alt="">
+                        </div>
+                        <div class="react--section">
+                            <% if(post.post_stats == 1){ %>
+                                <form action="/dashboard/react/delete" method="post">
+                                    <button class = "react--btn" type="submit"  name="post_id" value="<%= post.post_id%>"><img  width = "32" src="/img/heart2.png" alt=""></button>
+                                </form>
+                           <% }else{ %>
+                                <form action="/dashboard/react" method="post">
+                                    <button class = "react--btn" type="submit"  name="post_id" value="<%= post.post_id%>"><img  width = "32" src="/img/heart.png" alt=""></button>
+                                </form>
+                         <%  }
+                            %>
+                            <p><%= post.post_reaction %></p>
+                        </div>
+                    </div>
+             <%   })%>
+            </div>
+        </div>
+    </main>    
+</body>
+</html>

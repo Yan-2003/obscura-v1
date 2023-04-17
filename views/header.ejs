@@ -1,0 +1,22 @@
+<header>
+    <div class="main--nav">
+        <nav class="navigation">
+            <div class="logo">
+                <h1>Obscura</h1>
+                <img  width = "20" src="/img/diaphragm.png" alt="">
+            </div>
+            <p><%= username %></p>
+            <div class="nav--btns">
+                <form class="search--bar--main" action="/galleries/search/user" method="get" autocomplete="off">
+                    <input  class = "search--bar" type="text" placeholder="Search.." name="input">
+                    <button type="submit" class="search--btn"><img  width = "25" src="/img/search.png" alt=""></button>
+                </form>
+                <a href="/dashboard" class="nav--btn">Home</a>
+                <a href="/galleries" class="nav--btn">Galleries</a>
+                <a href="/mygalleries" class="nav--btn">My Gallery</a>
+                <a href="/logout" class="nav--btn">Logout</a>
+                <a href="/posting"  class="nav--btn"><img width="30" src="/img/plus.png" alt=""></a>
+            </div>
+        </nav>
+    </div>
+</header>
